@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>information your booking</title>
+<style>
+.page {
+    min-height: 100vh;
+    background: url("lobby.jpg") center/cover ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.box{
+    background: white;
+    height: 940px;
+    width: 450px;
+    text-align: left;
+    padding: 2em;
+}
+
+body {
+	background: lightgray;
+}
+
+.font {
+	 font-size: 20px;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+<div class="box">
+<h1>Reservation successful</h1>
+<div class="font">
+<script>
+
+var f= location.search;
+
+const params = new URLSearchParams(location.search);
+document.write("<h2>Booking details</h2>");
+document.write("</br>");
+document.write("Full Name:"+params.get("name"));
+document.write("</br>");
+
+
+document.write("Phone Number: "+params.get("phone"));
+document.write("</br>");
+
+document.write("The number of people: "+params.get("people"));
+document.write("</br>");
+
+document.write("day:"+params.get("days"));
+document.write("</br>");
+
+document.write("hours: "+params.get("hours"));
+document.write("</br>");
+
+let counter = 0;
+let a = ++counter;
+document.write("booking number: "+a);
+document.write("</br>");
+
+</script>
+</div>
+</div>
+</div>
+</body>
